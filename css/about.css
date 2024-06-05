@@ -1,0 +1,250 @@
+.wrapper {
+  
+    width: 100%;
+    position: relative;
+  }
+  .wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper i:first-child{
+    left: -22px;
+  }
+  .wrapper i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .carousel .card .img {
+    background: #8B53FF;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+  }
+  .card .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+  }
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+  }
+  .carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+  }
+  @media screen and (max-width: 900px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+  }
+  
+  
+  
+  .about-main p{
+      font-size:1.1rem;
+      line-height:2rem;
+  }
+  .about-us{
+      text-decoration-line:underline;
+    text-decoration-style: wavy;
+      color:#9f225b;
+  
+  }
+  
+  .nursing-programs{
+      text-decoration-line: underline;
+    text-decoration-style: wavy;
+      color:#9f225b;
+  
+  }
+  .btn-1{
+      
+      display: inline-block;
+                  outline: 0;
+                  cursor: pointer;
+                  border: none;
+                  padding: 0 66px;
+                  height: 45px;
+                  line-height: 45px;
+                  border-radius: 7px;
+                  background-color: #0070f3;
+                  color: white;
+                  font-weight: 400;
+                  margin-bottom:3rem;
+                  font-size: 16px;
+                  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+                  transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;               
+  }
+  .btn-1:hover{
+                      background: rgba(0,118,255,0.9);
+                      box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+                  }
+  
+                  .tie-ups {
+      flex-wrap: wrap !important;
+      align-items: stretch;
+  }
+  
+  .tie-ups h2 {
+      font-size: calc(1rem + 0.9vw);
+  }
+  
+  .tie-ups .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 4rem;
+      text-align: center;
+      width: 30rem;
+      text-wrap: wrap;
+      margin: 0.3rem;
+      box-sizing: border-box;
+  }
+  
+  .tie-ups img {
+      width: 12rem;
+      height: 5rem;
+      margin-bottom: 1rem;
+  }
+  
+  /* SECTION for image and content aside */
+  .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #4B0082; /* Dark purple background */
+      color: white;
+      padding: 2rem;
+      height: 100vh;
+      box-sizing: border-box;
+  }
+  
+  .content {
+      max-width: 50%;
+  }
+  
+  .content h1 {
+      font-size: 2.5rem;
+      margin: 0 0 1rem 25px;
+  }
+  
+  .content button {
+      background-color: #C2185B; /* Button color */
+      color: white;
+      border: none;
+      padding: 0.75rem 3.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-left: 2rem
+  }
+  
+  .image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+      .section {
+          flex-direction: column;
+          text-align: center;
+          height: auto;
+      }
+  
+      .content {
+          max-width: 100%;
+      }
+  
+      .content h1 {
+          font-size: 2rem;
+      }
+  
+      .content button {
+          font-size: 1rem;
+          padding: 0.5rem 1rem;
+      }
+  
+      .image {
+          margin-top: 1rem;
+      }
+  
+      .image img {
+          width: 80%;
+          height: auto;
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .content h1 {
+          font-size: 1.5rem;
+      }
+  
+      .content button {
+          font-size: 0.875rem;
+          padding: 0.5rem 1rem;
+      }
+  }
+   
