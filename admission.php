@@ -23,6 +23,12 @@
 
     }
     </style>
+    <style>
+    .about-main{
+  margin-top: 4rem!important;
+}
+</style>
+
 </head>
 <?php include('includes/header.php'); ?>
 <div class="about-main container d-flex align-items-center justify-content-center flex-wrap">

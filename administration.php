@@ -12,6 +12,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <style>
+    
     .about-us{
     text-decoration-line:underline;
   text-decoration-style: wavy;
@@ -19,6 +20,12 @@
 
 }
 </style>
+<style>
+    .about-main{
+  margin-top: 4rem!important;
+}
+</style>
+
 <body>
 
     <?php include('includes/header.php'); ?>

@@ -26,12 +26,12 @@
             --search-text: #010718;
         }
         nav {
-           
-           
-            height: 70px;
-            width: 100%;
-            background-color: var(--nav-color);
-            z-index: 100;
+    top: 0;
+    left: 0;
+    height: 112px;
+    width: 100%;
+    background-color: var(--nav-color);
+    z-index: 100;
         }
         body.dark nav {
             border: 1px solid #393838;

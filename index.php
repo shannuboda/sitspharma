@@ -12,10 +12,10 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>
+<body >
 
     <?php include('includes/header.php'); ?>
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div style="margin-top:5rem;" id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="./images/SID BTECH.jpg" class="d-block w-100" alt="...">
@@ -38,7 +38,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="d" style="width:100%;background:red;height:2rem"></div>
+    <div class="d" style="width:100%;background:red;height:.5rem;"></div>
 
     <div class="intro container">
         <div class="welcome">

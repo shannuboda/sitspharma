@@ -12,7 +12,11 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/about.css">
 </head>
-
+<style>
+    .about-main{
+  margin-top: 4rem!important;
+}
+</style>
 
 <body>
 <?php 

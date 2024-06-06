@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/department.css">
     <style>
+    .about-main{
+  margin-top: 4rem!important;
+}
+</style>
+
+    <style>
    
     </style>
 </head>
