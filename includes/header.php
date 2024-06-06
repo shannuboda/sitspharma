@@ -10,9 +10,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <title>Responsive Navigation Menu Bar</title>
-    <style>
-     
-    </style>
+   
 </head>
 <body style="display:flex;flex-direction: column">
 
@@ -43,7 +41,7 @@
                     </li>
 
                     <li>
-                        <a href="#">About <span class="dropdown-toggle"></span></a>
+                        <a href="#">Academics <span class="dropdown-toggle"></span></a>
                         <ul class="sub-menu">
                             <li><a href="about.php">Departments</a></li>
                             <li><a href="administration.php">Courses</a></li>

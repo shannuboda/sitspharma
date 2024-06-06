@@ -4,222 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="style.css">
-    <!-- ===== Boxicons CSS ===== -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <title>Responsive Navigation Menu Bar</title>
-    <style>
-        /* ===== Google Font Import - Poppins ===== */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-      
-
-        /* ===== Colours ===== */
-        :root {
-            --body-color: #E4E9F7;
-            --nav-color: #3b1d64;
-            --side-nav: #3b1d64;
-            --text-color: #FFF;
-            --search-bar: #F2F2F2;
-            --search-text: #010718;
-        }
-
-      
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 70px;
-            width: 100%;
-            background-color: var(--nav-color);
-            z-index: 100;
-        }
-
-        body.dark nav {
-            border: 1px solid #393838;
-        }
-
-        nav .nav-bar {
-            position: relative;
-            height: 100%;
-            max-width: 1350px;
-            width: 100%;
-            background-color: var(--nav-color);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        nav .nav-bar .sidebarOpen {
-            color: var(--text-color);
-            font-size: 30px;
+<style>
+    .contact-label {
+            background-color: #d84315;
+            color: white;
             padding: 10px;
-            cursor: pointer;
-            display: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        nav .nav-bar .logo a {
-            font-size: 25px;
-            font-weight: 500;
-            color: var(--text-color);
-            text-decoration: none;
-        }
-
-        .menu .logo-toggle {
-            display: none;
-        }
-
-        .nav-bar .nav-links {
+        .contact-info {
             display: flex;
             align-items: center;
         }
 
-        .nav-bar .nav-links li {
-            margin: 0 5px;
-            list-style: none;
-            position: relative;
+        .contact-info i {
+            margin-right: 8px;
         }
 
-        @media screen and (min-width: 1216px) and (max-width: 1366px) {
-            .nav-bar .nav-links li {
-                margin: 0px !important;
-            }
-        }
-
-        .nav-links li a {
-            position: relative;
-            font-size: 14px;
-            font-weight: 400;
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 8px;
-            margin-left: 0.5rem;
-        }
-
-       
-    
-
-        .nav-links li .sub-menu {
-            display: none;
-            position: absolute;
-            background-color: var(--side-nav);
-            top: 100%;
-            left: 0;
-            padding: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-links li .sub-menu li {
-            margin: 0;
-        }
-
-        .nav-links li .sub-menu li a {
-            padding: 10px 20px;
-            font-size: 14px;
-            white-space: nowrap;
-        }
-
-        .nav-links li:hover .sub-menu {
-            display: block;
-        }
-
-        .nav-bar .darkLight-searchBox {
+        .social-media-icons {
             display: flex;
-            align-items: center;
+            gap: 10px;
         }
 
-        @media screen and (max-width: 1024px) {
-            .nav-links li a {
-                font-size: 9px;
-            }
+        .social-media-icons a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
         }
 
-        @media (max-width: 790px) {
-            nav .nav-bar .sidebarOpen {
-                display: block;
-            }
-
-            .menu {
-                position: fixed;
-                height: 100%;
-                width: 320px;
-                left: -100%;
-                top: 0;
-                padding: 20px;
-                background-color: var(--side-nav);
-                z-index: 100;
-                transition: all 0.4s ease;
-                overflow-x: scroll;
-            }
-
-            nav.active .menu {
-                left: 0;
-            }
-
-            nav.active .nav-bar .navLogo a {
-                opacity: 0;
-                transition: all 0.3s ease;
-            }
-
-            .menu .logo-toggle {
-                display: block;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            .logo-toggle .siderbarClose {
-                color: var(--text-color);
-                font-size: 30px;
-                cursor: pointer;
-            }
-
-            .nav-bar .nav-links {
-                flex-direction: column;
-                padding-top: 30px;
-            }
-
-            .nav-links li a {
-                display: block;
-                margin-top: 10px;
-                font-size: 1.5rem;
-            }
-
-            .nav-links li .sub-menu {
-                position: static;
-                box-shadow: none;
-                background-color: transparent;
-                padding: 0;
-            }
-
-            .nav-links li .sub-menu li a {
-                font-size: 1.2rem;
-                padding: 10px 20px;
-            }
-
-            .nav-links li:hover .sub-menu {
-                display: none;
-            }
-
-            .nav-links li.active .sub-menu {
-                display: block;
-            }
-
-            .nav-links li .dropdown-toggle {
-                cursor: pointer;
-                display: inline-block;
-                font-size: 1.2rem;
-                margin-left: 5px;
-            }
+        .social-media-icons a:hover {
+            color: #ffcc00;
         }
     </style>
 </head>
-<body>
-    <nav>
+<body style="display:flex;flex-direction: column">
+
+<div class="d-flex justify-center" style="padding:0;background:#3b1d64;">
+</div>
+<div class="contact-label">
+        <div class="contact-info">
+            <i class="fas fa-envelope"></i> info@msriner.com
+            <i class="fas fa-phone" style="margin-left: 20px;"></i> +9180-23604047
+        </div>
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+<nav>
+
         <div class="nav-bar">
+        <img src="http://msriner.com/wp-content/uploads/2019/05/color-logo.png" alt="" srcset="" style="height: 4rem;">
+
             <i class='bx bx-menu sidebarOpen'></i>
             <div class="menu">
                 <div class="logo-toggle">
@@ -227,33 +72,65 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="committee.php">Committee</a></li>
                     <li>
-                        <a href="#">Call for Papers <span class="dropdown-toggle">+</span></a>
+                        <a href="#">About <span class="dropdown-toggle"></span></a>
                         <ul class="sub-menu">
-                            <li><a href="#">Submission Guidelines</a></li>
-                            <li><a href="#">Topics</a></li>
-                            <li><a href="#">Important Dates</a></li>
+                            <li><a href="about.php">About US</a></li>
+                            <li><a href="administration.php">Administration</a></li>
+                            <li><a href="facilities.php">Facilities</a></li>
+                            <li><a href="affiliation.php">Affiliation</a></li>
+                            <li><a href="annualreport.php">Annual Reports</a></li>
+                            <li><a href="contactus.php">Contact US</a></li>
                         </ul>
                     </li>
-                    <li><a href="cos.php">Call for Sponsors</a></li>
-                    <li><a href="impDates.php">Important Dates</a></li>
-                    <li><a href="registration.php">Registration</a></li>
-                    <li><a href="keynote.php">Keynote</a></li>
-                    <li><a href="acceptedpapers.php">Accepted Papers</a></li>
+
                     <li>
-                        <a href="#">Publications <span class="dropdown-toggle">+</span></a>
+                        <a href="#">About <span class="dropdown-toggle"></span></a>
                         <ul class="sub-menu">
-                            <li><a href="#">Journal</a></li>
-                            <li><a href="#">Conference Proceedings</a></li>
+                            <li><a href="about.php">Departments</a></li>
+                            <li><a href="administration.php">Courses</a></li>
+                            <li><a href="facilities.php">Faculty</a></li>
+                            <li><a href="studentfeedback.php">Student Feedback</a></li>
+                           
                         </ul>
                     </li>
-                    <li><a href="downloads.php">Downloads</a></li>
-                    <li><a href="contactus.php">Contact Us</a></li>
+
+                    <li><a href="admission.php">Admissions</a></li>
+                    <li><a href="outreach.php">Community Outreach</a></li>
+                    <li><a href="placements.php">Placement</a></li>
+                    <li><a href="research.php">Research</a></li>
+                    <li><a href="departments.php">Alumini</a></li>
+                    <li><a href="news&events.php">News & events</a></li>
+                    <li><a href="careers.php">Careers</a></li>
+                    <li>
+                        <a href="#">Gallery <span class="dropdown-toggle"></span></a>
+                        <ul class="sub-menu">
+                            <li><a href="Photos.php">Photos</a></li>
+                            <li><a href="video.php">Videos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="enotice.php">E - Notice</a></li>   
                 </ul>
             </div>
         </div>
+
+        <div class="mq" >
+        <ul>
+    <li><i class="fa fa-arrow-right"></i> <a href="https://example.com/article1" target="_blank">Understanding the Basics of Web Development</a></li>
+    <li><i class="fa fa-arrow-right"></i> <a href="https://example.com/article2" target="_blank">A Comprehensive Guide to CSS Grid Layout</a></li>
+    <li><i class="fa fa-arrow-right"></i> <a href="https://example.com/article3" target="_blank">JavaScript ES6 Features You Should Know</a></li>
+    <li><i class="fa fa-arrow-right"></i> <a href="https://example.com/article4" target="_blank">How to Optimize Your Website for SEO</a></li>
+    <li><i class="fa fa-arrow-right"></i> <a href="https://example.com/article5" target="_blank">Top 10 JavaScript Libraries for Front-End Development</a></li>
+    <li><i class="fa fa-arrow-right"></i> <a href="https://example.com/article6" target="_blank">The Future of Web Development: Trends to Watch</a></li>
+    <li><i class="fa fa-arrow-right"></i> <a href="https://example.com/article7" target="_blank">An Introduction to Responsive Web Design</a></li>
+    <li><i class="fa fa-arrow-right"></i> <a href="https://example.com/article8" target="_blank">How to Use Flexbox for Modern Layouts</a></li>
+</ul>
+
+    </div>
     </nav>
+
+  
+    <script src="script.js"></script>
     <script>
         const body = document.querySelector("body"),
               nav = document.querySelector("nav"),
