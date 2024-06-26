@@ -24,7 +24,7 @@
 
 <body>
     <?php include('includes/header.php');?>
-    <h1 class="text-center facilities-heading">OUR FACILITIES</h1>
+    <h1 class="about-main text-center facilities-heading">OUR FACILITIES</h1>
     <div class="facilities-content">
         <div class="left">
             <img src="https://msriner.com/wp-content/uploads/2021/01/20210109_110534-01.jpeg" alt="Classroom Image">

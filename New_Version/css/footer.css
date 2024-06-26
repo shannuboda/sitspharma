@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+.footer {
+    background-color: #202020;
+    color: #fff;
+    font-family: "Poppins", sans-serif !important;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    padding: 0 15px;
+    min-width: 250px;
+    box-sizing: border-box;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    color: #00AEEF;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.footer-section p, .footer-section a {
+    line-height: 1.8; /* Adjusted for better matching */
+    color: #fff;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #00AEEF;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.subscription {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center; /* Centered the subscription box */
+}
+
+.subscription input {
+    padding: 10px;
+    border: none;
+   
+    outline: none;
+    width: calc(100% - 50px);
+    
+}
+
+.subscription .subscribe-btn {
+    background-color: #E84242;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    /* border-radius: 3px; */
+    width: 50px;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section .links {
+    flex: 1 1 30%;
+}
+
+.links ul {
+    column-count: 2; /* Splits the links into two columns */
+    column-gap: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #111;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.phone-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 16 16"%3e%3cpath d="M1.885.511a1.745 1.745 0 00-.221 2.276l2.2 2.668a1.745 1.745 0 002.282.223l.887-.62c.554-.39 1.29-.32 1.75.17l.917.955c1.192 1.243 1.97 2.052 2.88 3.108.895 1.038 1.682 2.064 3.107 3.107l.955.918c.49.46.56 1.196.17 1.75l-.62.887a1.745 1.745 0 00.223 2.282l2.668 2.2a1.745 1.745 0 002.276-.221C14.76 17.777 1.367 4.383.197 1.73.073 1.494.073 1.248.197 1.014a1.745 1.745 0 011.688-.503z"%3e%3c/path%3e%3c/svg%3e');
+    background-size: cover;
+    vertical-align: middle;
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .footer-section .links {
+        width: 100%;
+    }
+
+    .subscription {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .subscription input {
+        width: 60%; /* Set specific width for tablet view */
+        max-width: 400px; /* Ensure it's not too wide */
+        margin-right: 10px;
+    }
+
+    .subscription .subscribe-btn {
+        width: auto;
+        padding: 10px 15px;
+    }
+
+    .links ul {
+        column-count: 2; /* Two columns for tablet view */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        padding: 10px;
+        min-width: 100%;
+    }
+
+    .subscription input {
+        width: 70%;
+    }
+
+    .subscription .subscribe-btn {
+        width: auto;
+        padding: 10px 15px;
+    }
+
+    .links ul {
+        column-count: 1; /* Single column for smaller screens */
+    }
+}

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,600&display=swap');
+
+.intro{
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+ .wel-img img{
+  height: 22rem !important;
+  width: 35rem !important;;
+ }
+ .welcome p{
+
+    margin-top: 0;
+    margin-bottom: 1rem;
+    max-width: 30rem;
+    text-align: justify;
+ }
+ .welcome h2{
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color: #a02966;
+ }
+
+.mission
+{
+    background: #9d1d59;
+    padding: 4rem;
+    width: 84%;
+}
+ 
+.vision{
+    background: #3b1d64;
+    padding: 4rem;
+    width: 84%;
+}
+.mission .title, .vision .title{
+    font-size: 3rem;
+}
+.course-btn {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    color: white;
+    background: #3b1d64;
+    font-size: 19px;
+    height: 38px !important;
+    width: 6.9rem !important;
+    font-weight: 600;
+}
+.courses h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    color: #9d1d59;
+    text-align: center;
+    padding-top: 3rem;
+    
+}
+
+.course .card{
+    border-bottom: 4px solid red;
+    width: 21rem;
+}
+.about-main{
+  margin-top: 4rem!important;
+}
+.carousel-inner {
+  
+    overflow: hidden !important;
+    position: relative !important; /* Required for positioning child elements */
+}
+
+.carousel-inner img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Adjust this if you want different behavior */
+    transition: transform 2s ease-in-out !important; /* Smooth transition */
+    animation: zoomIn 9s ease-in-out !important; /* Add animation */
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1); /* Scale image to 110% */
+    }
+}
